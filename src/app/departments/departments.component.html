@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <div class="list-group">
+    <div *ngFor="let i of departments" class="list-group-item">
+      <a routerLink='/user/{{i.id}}'>{{i.name}}</a>
+      <button class="btn btn-xs btn-danger" (click)="delete(i.id)">Delete</button>
+    </div>
+  </div>
+
+
+  <form [formGroup]="form" (ngSubmit)="addDepartment()" class="myForm">
+    <h3>Create new department</h3>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control underlined"
+        id="name"
+        formControlName="name"
+      >
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <input type="text"
+             class="form-control underlined"
+             id="desc"
+             formControlName="description"
+      >
+    </div>
+    <div class="form-group">
+      <button type="submit"
+              class="btn btn-block btn-primary"
+              [disabled]="form.invalid"
+      >Add
+      </button>
+    </div>
+
+  </form>
+</div>
+
+

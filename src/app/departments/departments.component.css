@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+.myForm {
+  width: 30%;
+  border: 1px darkgray solid;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 30px;
+}
+.list-group {
+  margin: 30px;
+  width: 50%;
+
+}
+.btn {
+  float: right;
+}
